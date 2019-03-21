@@ -1,5 +1,5 @@
-import uris from 'src/api/uris'
-import {clearAccessToken} from 'src/helpers'
+import uris from '../../../api/uris'
+import {clearAccessToken} from '../../../helpers'
 import types from './types'
 
 

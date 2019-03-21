@@ -1,7 +1,7 @@
 import types from './types'
 import actionTypes from './action-types'
 import _ from 'lodash'
-import { authHeader, jsonHeaders, clearAccessToken } from 'src/helpers'
+import { authHeader, jsonHeaders, clearAccessToken } from '../../../helpers'
 import axios from 'axios'
 
 export default {
