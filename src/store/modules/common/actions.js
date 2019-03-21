@@ -5,8 +5,8 @@ import { authHeader, jsonHeaders, clearAccessToken } from '../../../helpers'
 import axios from 'axios'
 
 export default {
-  [actionTypes.SET_BASE_URL]: function ({commmit}, baseUrl) {
-    commmit(types.SET_BASE_URL, baseUrl);
+  [actionTypes.SET_BASE_URL]: function ({commit}, baseUrl) {
+    commit(types.SET_BASE_URL, baseUrl);
   },
   [actionTypes.SET_API_KEY]: function ({commit}, apiKey) {
     commit(types.SET_API_KEY, apiKey)
