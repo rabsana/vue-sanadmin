@@ -20,10 +20,10 @@ export default {
     let url = state.baseUrl + uri
     return new Promise(function (resolve, reject) {
       axios({
-        method,
-        url,
-        data,
-        headers
+        method: method,
+        url: url,
+        data: data,
+        headers: headers
       }).then(function (result) {
         resolve(result)
       }).catch(function (error) {
