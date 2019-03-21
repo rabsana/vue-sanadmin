@@ -1,13 +1,13 @@
-import state from './state';
-import actions from './actions';
-import mutations from './mutations';
-import getters from './getters';
+import state from './state'
+import actions from './actions'
+import mutations from './mutations'
+import getters from './getters'
 
-export default {
-    namespaced: true,
+export const authModule = {
+  namespaced: true,
 
-    state,
-    actions,
-    mutations,
-    getters
+  state,
+  actions,
+  mutations,
+  getters
 }

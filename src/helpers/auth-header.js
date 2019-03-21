@@ -1,9 +1,11 @@
-export function authHeader() {
-    let accessToken = localStorage.getItem('access_token');
+import {getAccessToken} from './access-token'
 
-    if(accessToken){
-        return {'Authorization': 'Bearer ' + accessToken};
-    }
+export function authHeader () {
+  let accessToken = getAccessToken()
 
-    return {};
+  if (accessToken) {
+    return { 'Authorization': 'Bearer ' + accessToken }
+  }
+
+  return {}
 }

@@ -1,6 +1,6 @@
-export  function jsonHeaders() {
-    return {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    };
+export function jsonHeaders () {
+  return {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  }
 }
