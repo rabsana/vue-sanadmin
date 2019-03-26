@@ -18,13 +18,20 @@ export default {
       'API-KEY': state.apiKey
     })
     let url = state.baseUrl + uri
+    let axiosConfig = {
+      method,
+      url,
+      headers
+    }
+    let applicableDataMethods = ['post', 'put', 'patch']
+    if (_.indexOf(applicableDataMethods, _.lowerCase(method))) {
+      axiosConfig['data'] = data
+    } else {
+      axiosConfig['params'] = data
+    }
+
     return new Promise(function (resolve, reject) {
-      axios({
-        method: method,
-        url: url,
-        data: data,
-        headers: headers
-      }).then(function (result) {
+      axios(axiosConfig).then(function (result) {
         resolve(result)
       }).catch(function (error) {
         if (error.response.status === 403) {
