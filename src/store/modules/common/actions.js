@@ -24,7 +24,7 @@ export default {
       headers
     }
     let applicableDataMethods = ['post', 'put', 'patch']
-    if (_.indexOf(applicableDataMethods, _.lowerCase(method))) {
+    if (_.indexOf(applicableDataMethods, _.lowerCase(method)) > -1) {
       axiosConfig['data'] = data
     } else {
       axiosConfig['params'] = data
