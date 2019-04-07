@@ -34,7 +34,7 @@ export default {
       axios(axiosConfig).then(function (result) {
         resolve(result)
       }).catch(function (error) {
-        if (error.response.status === 403) {
+        if (error.response.status === 403 || error.response.status === 401) {
           clearAccessToken()
           location.reload(true)
         }
