@@ -35,5 +35,8 @@ export default {
     state.alertVisible = true
     state.isLoggedIn = true
     store.set('access_token', payload.access_token)
+    setTimeout(function () {
+      location.reload(true)
+    }, 1500)
   }
 }
