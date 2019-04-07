@@ -10,5 +10,14 @@ export default {
   },
   [mutationTypes.USERS_LIST_FAILURE]: function (state, payload) {
     state.usersListLoading = false
+  },
+  [mutationTypes.USER_DATA_REQUEST]: function (state, payload) {
+    state.userData = {}
+  },
+  [mutationTypes.USER_DATA_SUCCESS]: function (state, payload) {
+    state.userData = payload
+  },
+  [mutationTypes.USER_DATA_FAILURE]: function (state, payload) {
+    state.userData = {}
   }
 }

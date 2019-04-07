@@ -14,5 +14,16 @@ export default {
     }).catch(function (error) {
       commit(mutationTypes.USERS_LIST_FAILURE, error.response.data)
     })
+  },
+  [actionTypes.FETCH_USER_DATA]: function ({commit, dispatch}, payload) {
+    let method = 'get'
+    let uri = uris.USER_DATA_PATH + '/' + payload
+    commit(mutationTypes.USER_DATA_REQUEST)
+
+    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
+      commit(mutationTypes.USER_DATA_SUCCESS, result.data)
+    }).catch(function (error) {
+      commit(mutationTypes.USER_DATA_FAILURE, error.response.data)
+    })
   }
 }
