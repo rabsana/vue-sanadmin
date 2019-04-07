@@ -17,7 +17,7 @@ export default {
   },
   [actionTypes.FETCH_USER_DATA]: function ({commit, dispatch}, payload) {
     let method = 'get'
-    let uri = uris.USER_DATA_PATH + '/' + payload
+    let uri = uris.USERS_PATH + '/' + payload
     commit(mutationTypes.USER_DATA_REQUEST)
 
     dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
