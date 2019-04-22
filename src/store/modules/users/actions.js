@@ -27,10 +27,11 @@ export default {
     })
   },
   [actionTypes.UPDATE_USER_DATA]: function ({commit, dispatch}, payload) {
-    let method = 'post'
-    let uri = uris.USERS_PATH
+    let method = 'put'
+    let uri = uris.USERS_PATH + '/' + payload.id
+    let data = payload
     commit(mutationTypes.UPDATE_USER_DATA_REQUEST)
-    dispatch('sanadmin/common/'+commonActionTypes.API_CALL, {method, uri}, {root: true}).then(function (result) {
+    dispatch('sanadmin/common/'+commonActionTypes.API_CALL, {method, uri, data}, {root: true}).then(function (result) {
       commit(mutationTypes.UPDATE_USER_DATA_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.UPDATE_USER_DATA_FAILURE, error.response.data)
