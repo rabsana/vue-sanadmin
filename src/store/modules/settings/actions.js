@@ -25,6 +25,7 @@ export default {
       commit(mutationTypes.UPDATE_SETTINGS_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.UPDATE_SETTINGS_FAILURE, error.response.data)
+      throw error
     })
   }
 }
