@@ -9,7 +9,7 @@ export default {
     let method = 'get'
     let uri = uris.SETTINGS_PATH
     let data = payload
-    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(mutationTypes.FETCH_SETTINGS_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.FETCH_SETTINGS_FAILURE, error.response.data)
@@ -21,7 +21,7 @@ export default {
     let data = payload
     commit(mutationTypes.UPDATE_SETTINGS_REQUEST)
 
-    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(mutationTypes.UPDATE_SETTINGS_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.UPDATE_SETTINGS_FAILURE, error.response.data)
