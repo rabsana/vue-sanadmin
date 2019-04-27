@@ -39,6 +39,7 @@ export default {
           location.reload(true)
         }
         reject(error)
+        throw error
       })
     })
   }
