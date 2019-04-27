@@ -9,7 +9,7 @@ export default {
     let method = 'get'
     let uri = uris.USERS_PATH
     let data = payload
-    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(mutationTypes.USERS_LIST_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.USERS_LIST_FAILURE, error.response.data)
@@ -20,7 +20,7 @@ export default {
     let uri = uris.USERS_PATH + '/' + payload
     commit(mutationTypes.USER_DATA_REQUEST)
 
-    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
       commit(mutationTypes.USER_DATA_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.USER_DATA_FAILURE, error.response.data)
@@ -31,7 +31,7 @@ export default {
     let uri = uris.USERS_PATH + '/' + payload.id
     let data = payload
     commit(mutationTypes.UPDATE_USER_DATA_REQUEST)
-    dispatch('sanadmin/common/'+commonActionTypes.API_CALL, {method, uri, data}, {root: true}).then(function (result) {
+    return dispatch('sanadmin/common/'+commonActionTypes.API_CALL, {method, uri, data}, {root: true}).then(function (result) {
       commit(mutationTypes.UPDATE_USER_DATA_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.UPDATE_USER_DATA_FAILURE, error.response.data)

@@ -13,7 +13,7 @@ export default {
       password: payload.password
     }
 
-    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(types.LOGIN_SUCCESS, result.data)
     }).catch(function (error) {
       commit(types.LOGIN_FAILURE, error.response.data)
