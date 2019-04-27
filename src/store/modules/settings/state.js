@@ -1,4 +1,5 @@
 export default {
   settings: {},
-  loading: false
+  loading: false,
+  updateLoading: false,
 }

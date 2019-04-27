@@ -16,11 +16,12 @@ export default {
     })
   },
   [actionTypes.UPDATE_ALL_SETTINGS]: function ({commit, dispatch}, payload) {
-    let method = 'get'
-    let uri = uris.SETTINGS_PATH + '/' + payload
+    let method = 'patch'
+    let uri = uris.SETTINGS_PATH
+    let data = payload
     commit(mutationTypes.UPDATE_SETTINGS_REQUEST)
 
-    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
+    dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(mutationTypes.UPDATE_SETTINGS_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.UPDATE_SETTINGS_FAILURE, error.response.data)

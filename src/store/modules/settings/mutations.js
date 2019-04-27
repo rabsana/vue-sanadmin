@@ -12,12 +12,12 @@ export default {
     state.loading = false
   },
   [mutationTypes.UPDATE_SETTINGS_REQUEST]: function (state, payload) {
-    state.loading = true
+    state.updateLoading = true
   },
   [mutationTypes.UPDATE_SETTINGS_SUCCESS]: function (state, payload) {
-    state.settings = payload
+    state.updateLoading = false
   },
   [mutationTypes.UPDATE_SETTINGS_FAILURE]: function (state, payload) {
-    // ToDo
+    state.updateLoading = false
   }
 }
