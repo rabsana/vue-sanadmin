@@ -3,5 +3,6 @@ export default {
   LOGOUT_PATH: '/clients/web/admin/logout',
   SUPPORT_TICKETS_LIST: '/tickets',
   USERS_PATH: '/users',
-  SETTINGS_PATH: '/settings'
+  SETTINGS_PATH: '/settings',
+  TICKETS_PATH: '/support/tickets'
 }
