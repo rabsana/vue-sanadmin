@@ -21,11 +21,14 @@ export default {
     let data = payload
     commit(mutationTypes.UPDATE_SETTINGS_REQUEST)
 
-    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
-      commit(mutationTypes.UPDATE_SETTINGS_SUCCESS, result.data)
-    }).catch(function (error) {
-      commit(mutationTypes.UPDATE_SETTINGS_FAILURE, error.response.data)
-      throw error
+    return new Promise(function (resolve, reject) {
+      dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+        commit(mutationTypes.UPDATE_SETTINGS_SUCCESS, result.data)
+        resolve(result)
+      }).catch(function (error) {
+        commit(mutationTypes.UPDATE_SETTINGS_FAILURE, error.response.data)
+        reject(error)
+      })
     })
   }
 }
