@@ -1,6 +1,6 @@
 {
   "name": "vue-sanadmin",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "main": "dist/vue-sanadmin.umd.min.js",
   "module": "dist/vue-sanadmin.umd.min.js",
   "scripts": {
