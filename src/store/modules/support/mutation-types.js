@@ -13,5 +13,8 @@ export default {
   DELETE_MESSAGE_FAILURE: 'delete_message_failure',
   CREATE_MESSAGE_REQUEST: 'create_message_request',
   CREATE_MESSAGE_SUCCESS: 'create_message_success',
-  CREATE_MESSAGE_FAILURE: 'create_message_failure'
+  CREATE_MESSAGE_FAILURE: 'create_message_failure',
+  GET_MESSAGES_REQUEST: 'get_messages_request',
+  GET_MESSAGES_SUCCESS: 'get_messages_success',
+  GET_MESSAGES_FAILURE: 'get_messages_failure'
 }

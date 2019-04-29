@@ -7,6 +7,14 @@ export default {
     loading: false,
     message: ''
   },
+  messages: {
+    data: {},
+    status: '', // loading, success, error
+    status_code: '',
+    http_code: '',
+    loading: false,
+    message: ''
+  },
   ticket: {
     data: {},
     status: '', // loading, success, error

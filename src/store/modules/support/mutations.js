@@ -45,6 +45,15 @@ export default {
   },
   [mutationTypes.CREATE_MESSAGE_FAILURE]: function (state, payload) {
     state.createMessage = {...state.createMessage, status: 'error', loading: false}
+  },
+  [mutationTypes.GET_MESSAGES_REQUEST]: function(state, payload){
+    state.messages = {...state.messages, status: 'loading', loading: true}
+  },
+  [mutationTypes.GET_MESSAGES_SUCCESS]: function(state, payload){
+    state.messages = {...state.messages, data: payload, status: 'success', loading: false}
+  },
+  [mutationTypes.GET_MESSAGES_FAILURE]: function (state, payload) {
+    state.messages = {...state.messages, status: 'error', loading: false}
   }
 
 }
