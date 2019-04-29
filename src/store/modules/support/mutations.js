@@ -46,6 +46,15 @@ export default {
   [mutationTypes.CREATE_MESSAGE_FAILURE]: function (state, payload) {
     state.createMessage = {...state.createMessage, status: 'error', loading: false}
   },
+  [mutationTypes.CREATE_TICKET_REQUEST]: function(state, payload){
+    state.createTicket = {...state.createTicket, status: 'loading', loading: true}
+  },
+  [mutationTypes.CREATE_TICKET_SUCCESS]: function(state, payload){
+    state.createTicket = {...state.createTicket, data: payload, status: 'success', loading: false}
+  },
+  [mutationTypes.CREATE_TICKET_FAILURE]: function (state, payload) {
+    state.createTicket = {...state.createTicket, status: 'error', loading: false}
+  },
   [mutationTypes.GET_MESSAGES_REQUEST]: function(state, payload){
     state.messages = {...state.messages, status: 'loading', loading: true}
   },

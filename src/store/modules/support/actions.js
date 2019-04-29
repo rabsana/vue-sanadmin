@@ -56,6 +56,17 @@ export default {
       commit(mutationTypes.CREATE_MESSAGE_FAILURE, error.response.data)
     })
   },
+  [actionTypes.CREATE_TICKET]: function({commit, dispatch}, payload){
+    commit(mutationTypes.CREATE_TICKET_REQUEST)
+    let method = 'post'
+    let uri = uris.TICKETS_PATH
+    let data = payload
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+      commit(mutationTypes.CREATE_TICKET_SUCCESS, result.data)
+    }).catch(function (error) {
+      commit(mutationTypes.CREATE_TICKET_FAILURE, error.response.data)
+    })
+  },
   [actionTypes.GET_ALL_MESSAGES]: function({commit, dispatch}, payload){
     commit(mutationTypes.GET_MESSAGES_REQUEST)
     let method = 'get'

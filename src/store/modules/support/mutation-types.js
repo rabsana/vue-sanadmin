@@ -14,6 +14,9 @@ export default {
   CREATE_MESSAGE_REQUEST: 'create_message_request',
   CREATE_MESSAGE_SUCCESS: 'create_message_success',
   CREATE_MESSAGE_FAILURE: 'create_message_failure',
+  CREATE_TICKET_REQUEST: 'create_ticket_request',
+  CREATE_TICKET_SUCCESS: 'create_ticket_success',
+  CREATE_TICKET_FAILURE: 'create_ticket_failure',
   GET_MESSAGES_REQUEST: 'get_messages_request',
   GET_MESSAGES_SUCCESS: 'get_messages_success',
   GET_MESSAGES_FAILURE: 'get_messages_failure'
