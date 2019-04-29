@@ -4,5 +4,6 @@ export default {
   SUPPORT_TICKETS_LIST: '/tickets',
   USERS_PATH: '/users',
   SETTINGS_PATH: '/settings',
-  TICKETS_PATH: '/support/tickets'
+  TICKETS_PATH: '/support/tickets',
+  MESSAGES_PATH: '/support/messages'
 }
