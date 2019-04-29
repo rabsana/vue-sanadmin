@@ -37,7 +37,7 @@ export default {
   },
   [actionTypes.DELETE_MESSAGE]: function({commit, dispatch}, payload){
     commit(mutationTypes.DELETE_MESSAGE_REQUEST)
-    let method = 'get'
+    let method = 'delete'
     let uri = uris.MESSAGES_PATH + '/' + payload
     return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
       commit(mutationTypes.DELETE_MESSAGE_SUCCESS, result.data)
