@@ -47,7 +47,7 @@ export default {
   },
   [actionTypes.CREATE_MESSAGE]: function({commit, dispatch}, payload){
     commit(mutationTypes.CREATE_MESSAGE_REQUEST)
-    let method = 'get'
+    let method = 'post'
     let uri = uris.MESSAGES_PATH
     let data = payload
     return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
