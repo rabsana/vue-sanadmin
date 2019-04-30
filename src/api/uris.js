@@ -8,5 +8,7 @@ export default {
   USER_TICKETS_PATH: '/support/user-tickets',
   MESSAGES_PATH: '/support/messages',
   DEPARTMENTS_PATH: '/support/departments',
-  PRIORITIES_PATH: '/support/priorities'
+  PRIORITIES_PATH: '/support/priorities',
+  CERTIFICATES_PATH: '/identification/certificates',
+  USER_CERTIFICATES_PATH: '/identification/user-certificates'
 }
