@@ -18,7 +18,7 @@ export default {
   [actionTypes.FETCH_USER_TICKETS_LIST]: function({commit, dispatch}, payload){
     commit(mutationTypes.FETCH_TICKETS_REQUEST)
     let method = 'get'
-    let uri = uris.TICKETS_PATH + '/' + payload.user_id
+    let uri = uris.USER_TICKETS_PATH + '/' + payload.user_id
     let data = payload
     delete data['user_id']
     return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
