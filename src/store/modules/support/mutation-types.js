@@ -19,5 +19,11 @@ export default {
   CREATE_TICKET_FAILURE: 'create_ticket_failure',
   GET_MESSAGES_REQUEST: 'get_messages_request',
   GET_MESSAGES_SUCCESS: 'get_messages_success',
-  GET_MESSAGES_FAILURE: 'get_messages_failure'
+  GET_MESSAGES_FAILURE: 'get_messages_failure',
+  GET_DEPARTMENTS_REQUEST: 'get_departments_request',
+  GET_DEPARTMENTS_SUCCESS: 'get_departments_success',
+  GET_DEPARTMENTS_FAILURE: 'get_departments_failure',
+  GET_PRIORITIES_REQUEST: 'get_priorities_request',
+  GET_PRIORITIES_SUCCESS: 'get_priorities_success',
+  GET_PRIORITIES_FAILURE: 'get_priorities_failure'
 }

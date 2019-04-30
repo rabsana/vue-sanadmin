@@ -5,5 +5,7 @@ export default {
   USERS_PATH: '/users',
   SETTINGS_PATH: '/settings',
   TICKETS_PATH: '/support/tickets',
-  MESSAGES_PATH: '/support/messages'
+  MESSAGES_PATH: '/support/messages',
+  DEPARTMENTS_PATH: '/support/departments',
+  PRIORITIES_PATH: '/support/priorities'
 }

@@ -77,5 +77,27 @@ export default {
     }).catch(function (error) {
       commit(mutationTypes.GET_MESSAGES_FAILURE, error.response.data)
     })
+  },
+  [actionTypes.GET_ALL_DEPARTMENTS]: function({commit, dispatch}, payload){
+    commit(mutationTypes.GET_DEPARTMENTS_REQUEST)
+    let method = 'get'
+    let uri = uris.DEPARTMENTS_PATH
+    let data = payload
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+      commit(mutationTypes.GET_DEPARTMENTS_SUCCESS, result.data)
+    }).catch(function (error) {
+      commit(mutationTypes.GET_DEPARTMENTS_FAILURE, error.response.data)
+    })
+  },
+  [actionTypes.GET_ALL_PRIORITIES]: function({commit, dispatch}, payload){
+    commit(mutationTypes.GET_PRIORITIES_REQUEST)
+    let method = 'get'
+    let uri = uris.PRIORITIES_PATH
+    let data = payload
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+      commit(mutationTypes.GET_PRIORITIES_SUCCESS, result.data)
+    }).catch(function (error) {
+      commit(mutationTypes.GET_PRIORITIES_FAILURE, error.response.data)
+    })
   }
 }

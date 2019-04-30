@@ -5,5 +5,7 @@ export default {
   DELETE_MESSAGE: 'deleteMessage',
   CREATE_MESSAGE: 'createMessage',
   CREATE_TICKET: 'createTicket',
-  GET_ALL_MESSAGES: 'getAllMessages'
+  GET_ALL_MESSAGES: 'getAllMessages',
+  GET_ALL_DEPARTMENTS: 'getAllDepartments',
+  GET_ALL_PRIORITIES: 'getAllPriorities'
 }

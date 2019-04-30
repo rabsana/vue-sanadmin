@@ -63,6 +63,24 @@ export default {
   },
   [mutationTypes.GET_MESSAGES_FAILURE]: function (state, payload) {
     state.messages = {...state.messages, status: 'error', loading: false}
+  },
+  [mutationTypes.GET_DEPARTMENTS_REQUEST]: function(state, payload){
+    state.departments = {...state.departments, status: 'loading', loading: true}
+  },
+  [mutationTypes.GET_DEPARTMENTS_SUCCESS]: function(state, payload){
+    state.departments = {...state.departments, data: payload, status: 'success', loading: false}
+  },
+  [mutationTypes.GET_DEPARTMENTS_FAILURE]: function (state, payload) {
+    state.departments = {...state.departments, status: 'error', loading: false}
+  },
+  [mutationTypes.GET_PRIORITIES_REQUEST]: function(state, payload){
+    state.priorities = {...state.priorities, status: 'loading', loading: true}
+  },
+  [mutationTypes.GET_PRIORITIES_SUCCESS]: function(state, payload){
+    state.priorities = {...state.priorities, data: payload, status: 'success', loading: false}
+  },
+  [mutationTypes.GET_PRIORITIES_FAILURE]: function (state, payload) {
+    state.priorities = {...state.priorities, status: 'error', loading: false}
   }
 
 }

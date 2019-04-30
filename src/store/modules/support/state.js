@@ -15,6 +15,22 @@ export default {
     loading: false,
     message: ''
   },
+  departments: {
+    data: {},
+    status: '', // loading, success, error
+    status_code: '',
+    http_code: '',
+    loading: false,
+    message: ''
+  },
+  priorities: {
+    data: {},
+    status: '', // loading, success, error
+    status_code: '',
+    http_code: '',
+    loading: false,
+    message: ''
+  },
   ticket: {
     data: {},
     status: '', // loading, success, error
