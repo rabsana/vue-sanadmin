@@ -82,8 +82,9 @@ export default {
   [actionTypes.GET_ALL_MESSAGES]: function({commit, dispatch}, payload){
     commit(mutationTypes.GET_MESSAGES_REQUEST)
     let method = 'get'
-    let uri = uris.MESSAGES_PATH
+    let uri = uris.MESSAGES_PATH + '/' + payload['ticket_id']
     let data = payload
+    delete data['ticket_id']
     return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(mutationTypes.GET_MESSAGES_SUCCESS, result.data)
     }).catch(function (error) {
