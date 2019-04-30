@@ -1,5 +1,6 @@
 export default {
   FETCH_TICKETS_LIST: 'fetchTicketsList',
+  FETCH_USER_TICKETS_LIST: 'fetchUserTicketsList',
   FIND_TICKET_BY_ID: 'findTicketById',
   DELETE_TICKET: 'deleteTicket',
   DELETE_MESSAGE: 'deleteMessage',
