@@ -18,10 +18,8 @@ export default {
   [actionTypes.GET_USER_CERTIFICATES]: function({commit, dispatch}, payload){
     commit(mutationTypes.GET_USER_CERTIFICATES_REQUEST)
     let method = 'get'
-    let uri = uris.USER_CERTIFICATES_PATH + '/' + payload['user_id']
-    let data = payload
-    delete data['user_id']
-    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+    let uri = uris.USER_CERTIFICATES_PATH + '/' + payload
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri }, { root: true }).then(function (result) {
       commit(mutationTypes.GET_USER_CERTIFICATES_SUCCESS, result.data)
     }).catch(function (error) {
       commit(mutationTypes.GET_USER_CERTIFICATES_FAILURE, error.response.data)
