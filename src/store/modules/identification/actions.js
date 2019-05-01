@@ -27,9 +27,10 @@ export default {
   },
   [actionTypes.UPDATE_CERTIFICATE]: function({commit, dispatch}, payload){
     commit(mutationTypes.UPDATE_CERTIFICATE_REQUEST)
-    let method = 'put'
-    let uri = uris.CERTIFICATES_PATH
+    let method = 'patch'
+    let uri = uris.CERTIFICATES_PATH + '/' + payload['certificate_id']
     let data = payload
+    delete data['certificate_id']
     return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
       commit(mutationTypes.UPDATE_CERTIFICATE_SUCCESS, result.data)
     }).catch(function (error) {
