@@ -10,5 +10,7 @@ export default {
   DEPARTMENTS_PATH: '/support/departments',
   PRIORITIES_PATH: '/support/priorities',
   CERTIFICATES_PATH: '/identification/certificates',
-  USER_CERTIFICATES_PATH: '/identification/user-certificates'
+  USER_CERTIFICATES_PATH: '/identification/user-certificates',
+  PRODUCTS_PATH: '/shop/products',
+  ORDERS_PATH: '/shop/orders'
 }
