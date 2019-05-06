@@ -1,5 +1,5 @@
 import actionTypes from './action-types'
-import mutationTypes from '../support/mutation-types'
+import mutationTypes from './mutation-types'
 import uris from '../../../api/uris'
 import commonActionTypes from '../common/action-types'
 
