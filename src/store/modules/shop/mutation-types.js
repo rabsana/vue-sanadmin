@@ -4,5 +4,8 @@ export default {
   GET_PRODUCTS_FAILURE: 'get_products_failure',
   GET_ORDERS_REQUEST: 'get_orders_request',
   GET_ORDERS_SUCCESS: 'get_orders_success',
-  GET_ORDERS_FAILURE: 'get_orders_failure'
+  GET_ORDERS_FAILURE: 'get_orders_failure',
+  CREATE_PRODUCT_REQUEST: 'create_product_request',
+  CREATE_PRODUCT_SUCCESS: 'create_product_success',
+  CREATE_PRODUCT_FAILURE: 'create_product_failure'
 }

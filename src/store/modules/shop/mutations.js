@@ -18,5 +18,14 @@ export default {
   },
   [mutationTypes.GET_ORDERS_FAILURE]: function (state, payload) {
     state.orders = { ...state.orders, status: 'error', loading: false }
+  },
+  [mutationTypes.CREATE_PRODUCT_REQUEST]: function (state, payload) {
+    state.createProduct = { ...state.createProduct, status: 'loading', loading: true }
+  },
+  [mutationTypes.CREATE_PRODUCT_SUCCESS]: function (state, payload) {
+    state.createProduct = { ...state.createProduct, data: payload, status: 'success', loading: false }
+  },
+  [mutationTypes.CREATE_PRODUCT_FAILURE]: function (state, payload) {
+    state.createProduct = { ...state.createProduct, status: 'error', loading: false }
   }
 }
