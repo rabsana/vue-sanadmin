@@ -12,5 +12,7 @@ export default {
   CERTIFICATES_PATH: '/identification/certificates',
   USER_CERTIFICATES_PATH: '/identification/user-certificates',
   PRODUCTS_PATH: '/shop/products',
-  ORDERS_PATH: '/shop/orders'
+  ORDERS_PATH: '/shop/orders',
+  SELL_GATEWAYS_PATH: '/payment/sell-gateways',
+  BUY_GATEWAYS_PATH: '/payment/buy-gateways'
 }
