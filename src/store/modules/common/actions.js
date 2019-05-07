@@ -17,6 +17,14 @@ export default {
     headers = _.merge(headers, {
       'API-KEY': state.apiKey
     })
+    let hasFileUpload = _.find(data, function (o) {
+      return o instanceof File
+    }) !== undefined
+    if(hasFileUpload){
+      headers = _.merge(headers, {
+        'Content-Type': 'multipart/form-data'
+      })
+    }
     let url = state.baseUrl + uri
     let axiosConfig = {
       method,
