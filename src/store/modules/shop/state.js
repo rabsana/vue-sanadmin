@@ -15,6 +15,14 @@ export default {
     loading: false,
     message: ''
   },
+  categories: {
+    data: {},
+    status: '', // loading, success, error
+    status_code: '',
+    http_code: '',
+    loading: false,
+    message: ''
+  },
   createProduct: {
     data: {},
     status: '', // loading, success, error

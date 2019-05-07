@@ -10,6 +10,15 @@ export default {
   [mutationTypes.GET_PRODUCTS_FAILURE]: function (state, payload) {
     state.products = { ...state.products, status: 'error', loading: false }
   },
+  [mutationTypes.GET_CATEGORIES_REQUEST]: function (state, payload) {
+    state.categories = { ...state.categories, status: 'loading', loading: true }
+  },
+  [mutationTypes.GET_CATEGORIES_SUCCESS]: function (state, payload) {
+    state.categories = { ...state.categories, data: payload, status: 'success', loading: false }
+  },
+  [mutationTypes.GET_CATEGORIES_FAILURE]: function (state, payload) {
+    state.categories = { ...state.categories, status: 'error', loading: false }
+  },
   [mutationTypes.GET_ORDERS_REQUEST]: function (state, payload) {
     state.orders = { ...state.orders, status: 'loading', loading: true }
   },

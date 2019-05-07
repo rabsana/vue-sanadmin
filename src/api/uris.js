@@ -13,6 +13,7 @@ export default {
   USER_CERTIFICATES_PATH: '/identification/user-certificates',
   PRODUCTS_PATH: '/shop/products',
   ORDERS_PATH: '/shop/orders',
+  CATEGORIES_PATH: '/shop/categories',
   SELL_GATEWAYS_PATH: '/payment/sell-gateways',
   BUY_GATEWAYS_PATH: '/payment/buy-gateways'
 }

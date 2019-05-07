@@ -26,6 +26,17 @@ export default {
       commit(mutationTypes.GET_ORDERS_FAILURE, error.response.data)
     })
   },
+  [actionTypes.GET_CATEGORIES]: function({commit, dispatch}, payload){
+    commit(mutationTypes.GET_CATEGORIES_REQUEST)
+    let method = 'get'
+    let uri = uris.CATEGORIES_PATH
+    let data = payload
+    return dispatch('sanadmin/common/' + commonActionTypes.API_CALL, { method, uri, data }, { root: true }).then(function (result) {
+      commit(mutationTypes.GET_CATEGORIES_SUCCESS, result.data)
+    }).catch(function (error) {
+      commit(mutationTypes.GET_CATEGORIES_FAILURE, error.response.data)
+    })
+  },
   [actionTypes.CREATE_PRODUCT]: function({commit, dispatch}, payload){
     commit(mutationTypes.CREATE_PRODUCT_REQUEST)
     let method = 'post'
