@@ -24,6 +24,11 @@ export default {
       headers = _.merge(headers, {
         'Content-Type': 'multipart/form-data'
       })
+      let formData = new FormData()
+      _.forEach(data, function (o, i) {
+        formData.append(i, o)
+      })
+      data = formData
     }
     let url = state.baseUrl + uri
     let axiosConfig = {
